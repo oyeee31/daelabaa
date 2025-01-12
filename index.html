@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Greeting Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdf6e4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      width: 400px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 20px;
+    }
+    .card h1 {
+      font-size: 24px;
+      color: #ff6f61;
+    }
+    .card p {
+      font-size: 18px;
+      color: #333;
+    }
+    .card .sender {
+      margin-top: 20px;
+      font-style: italic;
+      color: #777;
+    }
+    .card input {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 90%;
+    }
+    .card button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .card button:hover {
+      background-color: #e65b50;
+    }
+    .message {
+      margin-top: 20px;
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 Happy Birthday! 🎂</h1>
+    <img src="images__1_-removebg-preview.png">
+    <p>Please Type Your Name👇</p>
+    <input type="text" id="recipient" placeholder="Here!!" />
+    <button onclick="generateCard()">Generate Card</button>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    function generateCard() {
+      const recipient = document.getElementById("recipient").value;
+      const messageDiv = document.getElementById("message");
+
+      if (recipient) {
+        messageDiv.innerHTML = `
+          <p>Dear <strong>${recipient}</strong>,</p>
+          <p>haiii, Happy Birthday kakkk yahhh udah ga seumuran lagi yhh whwh (KITA BEDA 1 BULAN!!) semoga diusia mu yang sekarang, kamu bisa lebih pinter, lebih lancar rezekinya, lebih menghargai diri sendiri, lebih menghargai orang lain, lebih baik dari sebelumnya, sehat selalu, pokonya semua yang baik baik lakhh. and yhh makasi udah bertahan sejauh ini, kamu tetap hidup merupakan tekad kamu untuk berjuang jangan sering sering putus asa, pokonya pantang menyerah lakhhh. (jujur aku kehabisan kata kata wksks) ohh iya, makasi juga kamu udah nemenin aku sejauh ini hhe walaupun kita gada hubungan yang jelas, seneng rasanya bisa komunikasi atau berinteraksi sama kamu, dari yang awalnya kita bahkan ga kenal satu sama lain atau yaa bahkan kita gatau kalo kita itu ada, jadi saling kenal satu sama lain bahkan yaa sampe salah satu anggota keluarga kita tau. jujur, selama ini aku masih dibayang bayangin sama kamu yang dulu, kamu yang ilang mendadak, kamu yang selalu nolak ajakan atau apapun itulah, dan puncak terkahir waktu tiba tiba kaget buka sg mu wkwk. sebenernya gapapa si kalo kamu ternyata punya atau apapun itu sama cowo, yaa karna kita gada apa apa wkwk cuma ya kaget aja si, ga percaya aja bahkan setelah denger cerita dari umar aku tambah kaget wkwk. kadang kalo kamu ilang atau kita lagi ribut aku sempet mikir (wah kalo keulang lagi gimana ya?) (apakah bakal keulang nih). aku takut kalo aku sampe terbiasa gada kamu di aku, rasa ku ke kamu malah ilang. tapi gapapa, sekarang aku mulai tau kalo manusia atau apapun itu ga selalu jadi apa yang kita mau. tapi ini salahku juga si, kita ga selangkah lebih maju ahaha. kayanya ini waktu yang pas buat ngomong ini semua. entah bakal lanjut atau engga, aku harap akhir dari kita adalah tidak asing satu sama lain (akhir akhir emang pernah mulai? wkwkkw) (JUJUR GATAU MAU NGOMONG APA) intinya doa yang baik baik lah buat oye yang OMG 17. bisa buat KTP yhh, bagus deh keren (ak when yh). oh iya maaf ya kak cuma bisa ngasi itu hehhee, aku gada ide apapun alias gada duwit woooe😭😭. maaf buat yang dulu, makasi juga udah nemenin aku selama ini, dengerin cerita ku, sempetin nerima call ku, mabar bareng aku, ketemu aku ahahahha. seneng rasanya bisa kenal kamu, daelaba. MAAF KALO BERANTAKAN,                                                                          CODING GABISA DIRAPIHIN SOALNYA😭😭</p>
+          <p>dari aku, Nandoo</p>
+        `;
+        messageDiv.style.display = "block";
+      } else {
+        messageDiv.innerHTML = "<p>Please fill in both fields to generate the card.</p>";
+        messageDiv.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
